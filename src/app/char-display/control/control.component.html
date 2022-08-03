@@ -1,0 +1,23 @@
+<h3 class="control-header">choose a <span class="bold">{{type}}</span> from options below:</h3>
+<!--  {{activeRoute.params | async}} -->
+<div class="choices-box" [formGroup]="formGroup">
+  <label [for]="option" class="choices-box__option" *ngFor="let option of currentPage$ | async">
+    <input type="radio"
+           formControlName="option"
+           [value]="option"
+           [id]="option"
+           (click)="optionSelect(option)"> <span>{{option}}</span>
+  </label>
+
+  <div class="choices-box__button-container"
+       [class.row-reverce]="type === 'race'">
+    <button class="btn"
+            (click)="toPreviousPage()"
+            *ngIf="type !== 'race'"><i class="fa fa-arrow-left btn-arrow-left"></i> back
+    </button>
+    <button class="btn flex-end"
+            (click)="toNextPage()">next<i class="fa fa-arrow-right btn-arrow-right"></i></button>
+
+  </div>
+</div>
+

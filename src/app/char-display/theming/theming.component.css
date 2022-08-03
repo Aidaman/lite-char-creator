@@ -1,0 +1,57 @@
+.theming {
+  padding: 22px 30px 22px 22px;
+  display: flex;
+  flex-direction: column;
+}
+.theming :host-context(.my-light-theme) {
+  background: #FFF;
+  color: #716868;
+}
+.theming :host-context(.my-dark-theme) {
+  background: #000;
+  color: #FFF;
+}
+.theming :host-context(.my-dark-theme) .btn {
+  background: #5B6D7E;
+}
+.theming__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 8px 0;
+}
+.theming__radios-row {
+  display: flex;
+  column-gap: 90px;
+  margin: 8px 0;
+}
+.theming__radio-container {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+.theming__bg-colorpick {
+  display: flex;
+  column-gap: 25px;
+}
+.theming__bg-colorpick .theming__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fa.fa-gear {
+  margin-left: 10px;
+  color: white;
+  font-size: 24px;
+}
+.fa.fa-gear :host {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=theming.component.css.map */

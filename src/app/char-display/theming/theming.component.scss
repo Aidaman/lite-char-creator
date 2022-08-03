@@ -1,0 +1,64 @@
+.theming{
+  padding: 22px 30px 22px 22px;
+  display: flex;
+  flex-direction: column;
+
+  :host-context( .my-light-theme ){
+    background: #FFF;
+    color: #716868;
+  }
+  :host-context( .my-dark-theme ){
+    background: #000;
+    color: #FFF;
+    .btn{
+      background: #5B6D7E;
+    }
+  }
+
+  &__title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+
+    margin: 8px 0;
+
+    //color: #716868;
+  }
+  &__radios-row{
+    display: flex;
+    column-gap: 90px;
+    margin: 8px 0;
+  }
+  &__radio-container{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    //color: #716868;
+  }
+
+  &__bg-colorpick{
+    display: flex;
+    column-gap: 25px;
+
+    .theming__column{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+.fa.fa-gear{
+  :host{
+    display: flex;
+    align-items: center;
+  };
+  margin-left: 10px;
+  color: white;
+  font-size: 24px;
+}

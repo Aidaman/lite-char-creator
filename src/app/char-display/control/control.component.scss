@@ -1,0 +1,63 @@
+//@import 'src/app/app.component';
+
+:host-context( .my-light-theme ){
+  background: #FFF;
+  color: #716868;
+}
+:host-context( .my-dark-theme ){
+  background: #000;
+  color: #FFF;
+  .btn{
+    background: #5B6D7E;
+  }
+}
+:host{
+  color: #777777;
+  width: 100%;
+  margin-top: auto;
+  padding: 23px 12px 14px 22px;
+}
+.control-header{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+
+}
+.bold{
+  font-weight: 700;
+}
+.choices-box{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  &__option{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    cursor: pointer;
+  }
+  &__button-container{
+    display: flex;
+    justify-content: space-between;
+
+    .btn-arrow-left{
+      margin-right: 6px;
+    }
+    .btn-arrow-right{
+      margin-left: 6px;
+    }
+    .flex-end{
+      align-self: flex-end;
+    }
+  }
+}
+
+.row-reverce{
+  flex-direction: row-reverse;
+}
+

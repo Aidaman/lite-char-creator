@@ -1,0 +1,39 @@
+<div class="theming">
+  <h3 class="theming__title">Theme</h3>
+  <div class="theming__radios-row" >
+    <label for="night-theme" class="theming__radio-container"> night
+      <input type="radio"
+             name="theme"
+             id="night-theme"
+             [checked]="isDark"
+             (click)="colorThemeChanged(true)">
+    </label>
+    <label for="day-theme" class="theming__radio-container"> day
+      <input type="radio"
+             name="theme"
+             id="day-theme"
+             [checked]="!isDark"
+             (click)="colorThemeChanged(false)">
+    </label>
+  </div>
+
+  <div class="theming__bg-colorpick">
+    <div class="theming__column">
+      <h3 class="theming__title">Background</h3>
+      <button class="btn" (click)="saveSettings()">Save<i class="fa fa-gear"></i></button>
+    </div>
+    <div class="theming__column">
+      <span [(colorPicker)]="charBgColor"
+             [style.background]="charBgColor"
+             [cpToggle]="true"
+             [cpDialogDisplay]="'inline'"
+             [cpAddColorButton]="false"
+             [cpDisableInput]="false"
+             cpPosition="auto"
+             (colorPickerChange)="emitcolorChange($event)"
+             class="colorPicker"
+              name="colopicker" id="colopicker"></span>
+<!--      <color-chrome (onChange)="emitcolorChange($event)"></color-chrome>  1 1 1 -->
+    </div>
+  </div>
+</div>

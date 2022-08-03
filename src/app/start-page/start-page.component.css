@@ -1,0 +1,49 @@
+.container {
+  margin: 6px 41px 100px;
+}
+
+.header {
+  color: #93C2ED;
+  text-align: center;
+}
+.header__logo {
+  font-family: "Amatic SC", cursive;
+  font-size: 64px;
+  object-fit: fill;
+  margin: 0;
+  line-height: 132px;
+}
+.header__slogan {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+  text-align: end;
+  font-family: Volkorn, serif;
+  margin-top: 32px;
+  margin-bottom: 54px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.main__random-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #716868;
+}
+.main .divider {
+  color: #93C2ED;
+  margin: 0 28px;
+}
+.main .divider-rotated {
+  transform: rotate(-3deg);
+}
+
+/*# sourceMappingURL=start-page.component.css.map */

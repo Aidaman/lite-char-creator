@@ -1,0 +1,25 @@
+
+<div *ngIf="isModalDisplayed"
+     [class.system]="isModalSystem"
+     class="modal-window interactive">
+  <p class="modal-window__message-string" *ngFor="let text of modalMessageContent[modalIdx].text">{{text}}</p>
+  <div class="row-reverce">
+    <div class="btn" (click)="isModalDisplayed = false"><i>close</i></div>
+  </div>
+</div>
+
+<div class="container" [class.container-less]="isTheming">
+  <button class="btn theming-btn" (click)="isTheming = !isTheming"><i class="fa fa-eyedropper"></i></button>
+  <div class="character-screen" [style.background-color]="bgColor">
+    <img [src]="imageUrl" alt="">
+  </div>
+
+  <app-control  [class.my-dark-theme]="isDarkTheme"
+                *ngIf="!isTheming; else theming"
+                (callModal)="optionChosenHandle($event)"
+                (imagePath)="onImageChange($event)"></app-control>
+  <ng-template #theming>
+    <app-theming  [class.my-dark-theme]="isDarkTheme"
+                  (colorEmiter)="onColorChange($event)"></app-theming>
+  </ng-template>
+</div>

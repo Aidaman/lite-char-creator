@@ -1,7 +1,6 @@
-import {Inject, Injectable, Renderer2} from "@angular/core";
+import {Injectable} from "@angular/core";
 import {Races} from "../enums/races"
 import {Classes} from "../enums/classes";
-import {DOCUMENT} from "@angular/common";
 
 export const FORMS: { [key: string]: (Races | Classes)[] } = {
   race: [Races.HUMAN, Races.ELF, Races.DWARF, ],

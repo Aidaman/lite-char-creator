@@ -1,0 +1,79 @@
+.modal-window {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  z-index: 1;
+  width: 75%;
+  box-shadow: 1px 21px 16px -4px rgba(0, 0, 0, 0.51);
+  padding: 11px 14px 14px 22px;
+  background: #EAEBB8;
+}
+.modal-window.system {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+}
+.modal-window__message-string {
+  margin: 6.5px 0;
+}
+.modal-window .btn {
+  margin-top: 0;
+}
+.modal-window .row-reverce {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+app-control, app-theming {
+  box-shadow: 1px -24px 16px -4px rgba(0, 0, 0, 0.51);
+}
+
+:host-context(.my-light-theme) app-control, :host-context(.my-light-theme) app-theming {
+  background: #FFF;
+  color: #716868;
+}
+
+:host-context(.my-dark-theme) app-control, :host-context(.my-dark-theme) app-theming {
+  background: #000;
+  color: #FFF;
+}
+:host-context(.my-dark-theme) app-control .btn, :host-context(.my-dark-theme) app-theming .btn {
+  background: #5B6D7E;
+}
+:host-context(.my-dark-theme) .btn {
+  background: #5B6D7E;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.container-less {
+  height: 87.25%;
+}
+
+.character-screen {
+  align-self: center;
+  width: 100%;
+  height: 100%;
+}
+.character-screen img {
+  width: 100%;
+  height: 100%;
+}
+
+.theming-btn {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+/*# sourceMappingURL=display.component.css.map */
